@@ -66,9 +66,9 @@ class InteractiveRecord
         where += "AND"
       end
       if value.is_a? (Numeric)
-        where += " #{key} = #{value}"
+        where += " #{key} = ?"
       else
-        where += " #{key} = '#{value}'"
+        where += " #{key} = ?"
       end
     end
 
