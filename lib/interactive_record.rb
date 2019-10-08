@@ -64,7 +64,6 @@ class InteractiveRecord
       where += " #{key} = ?"
     end
     sql += where
-    puts sql
     DB[:conn].execute(sql, attributes.values)
   end
 
