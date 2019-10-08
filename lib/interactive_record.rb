@@ -60,13 +60,11 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name}"
     where = ''
     attributes.each do |key, value|
-      if where.empty?
-        where = " WHERE"
-      else
-        where += "AND"
-      end
+      where += where.empty? ? " Where" : "AND"
       where += " #{key} = ?"
     end
+
+    true ? a : b
 
     sql += where
     puts sql
