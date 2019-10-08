@@ -74,7 +74,7 @@ class InteractiveRecord
 
     sql += where
     puts sql
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, attributes.values)
   end
 
 end
